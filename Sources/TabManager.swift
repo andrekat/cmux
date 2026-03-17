@@ -2521,12 +2521,18 @@ class TabManager: ObservableObject {
 
     private func windowTitle(for tab: Workspace?) -> String {
         guard let tab else { return "cmux" }
+        let baseTitle: String
         let trimmedTitle = tab.title.trimmingCharacters(in: .whitespacesAndNewlines)
         if !trimmedTitle.isEmpty {
-            return trimmedTitle
+            baseTitle = trimmedTitle
+        } else {
+            let trimmedDirectory = tab.currentDirectory.trimmingCharacters(in: .whitespacesAndNewlines)
+            baseTitle = trimmedDirectory.isEmpty ? "cmux" : trimmedDirectory
         }
-        let trimmedDirectory = tab.currentDirectory.trimmingCharacters(in: .whitespacesAndNewlines)
-        return trimmedDirectory.isEmpty ? "cmux" : trimmedDirectory
+        if let profileName = activeProfileName {
+            return "\(profileName) — \(baseTitle)"
+        }
+        return baseTitle
     }
 
     func focusTab(_ tabId: UUID, surfaceId: UUID? = nil, suppressFlash: Bool = false) {
@@ -4585,7 +4591,8 @@ extension TabManager {
         }
         return SessionTabManagerSnapshot(
             selectedWorkspaceIndex: selectedWorkspaceIndex,
-            workspaces: workspaceSnapshots
+            workspaces: workspaceSnapshots,
+            activeProfileName: activeProfileName
         )
     }
 
@@ -4652,6 +4659,7 @@ extension TabManager {
         // never see an intermediate state with empty tabs or nil selection.
         tabs = newTabs
         selectedTabId = newSelectedId
+        activeProfileName = snapshot.activeProfileName
         for workspace in newTabs {
             guard let terminalPanel = workspace.focusedTerminalPanel ?? workspace.panels.values
                 .compactMap({ $0 as? TerminalPanel })

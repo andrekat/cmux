@@ -7180,6 +7180,7 @@ class TerminalController {
                 result = .err(code: "save_failed", message: "Failed to save profile '\(name)'", data: nil)
                 return
             }
+            tabManager.setActiveProfileName(name)
             result = .ok([
                 "id": profile.id.uuidString,
                 "name": profile.name,
@@ -10922,6 +10923,7 @@ class TerminalController {
         guard let profile = ProfileStore.saveCurrentSession(name: name, tabManager: tabManager) else {
             return "ERROR: Failed to save profile '\(name)'"
         }
+        tabManager.setActiveProfileName(name)
         return "OK: Profile '\(profile.name)' saved with \(profile.snapshot.workspaces.count) workspace(s)"
     }
 

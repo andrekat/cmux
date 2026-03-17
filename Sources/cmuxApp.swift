@@ -1012,6 +1012,7 @@ struct cmuxApp: App {
         }
 
         if ProfileStore.saveCurrentSession(name: name, tabManager: manager) != nil {
+            manager.setActiveProfileName(name)
 #if DEBUG
             dlog("profile.save name=\(name) workspaces=\(manager.tabs.count)")
 #endif

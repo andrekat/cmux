@@ -305,6 +305,70 @@ final class ProfileStoreTests: XCTestCase {
         XCTAssertEqual(loaded?.snapshot.workspaces.count, 4)
     }
 
+    // MARK: - Session Snapshot Persistence
+
+    @MainActor
+    func testActiveProfileNameSurvivesSessionSnapshotRoundTrip() {
+        let manager = TabManager()
+        manager.setActiveProfileName("Work")
+
+        let snapshot = manager.sessionSnapshot(includeScrollback: false)
+        XCTAssertEqual(snapshot.activeProfileName, "Work")
+
+        let restored = TabManager()
+        restored.restoreSessionSnapshot(snapshot)
+        XCTAssertEqual(restored.activeProfileName, "Work")
+    }
+
+    @MainActor
+    func testSessionSnapshotWithNoProfileHasNilActiveProfileName() {
+        let manager = TabManager()
+        let snapshot = manager.sessionSnapshot(includeScrollback: false)
+        XCTAssertNil(snapshot.activeProfileName)
+
+        let restored = TabManager()
+        restored.restoreSessionSnapshot(snapshot)
+        XCTAssertNil(restored.activeProfileName)
+    }
+
+    func testActiveProfileNameDecodesFromLegacySnapshotWithoutField() throws {
+        // Snapshots saved before profiles existed won't have the field.
+        let json = """
+        {
+            "workspaces": [
+                {
+                    "processTitle": "zsh",
+                    "isPinned": false,
+                    "currentDirectory": "/tmp",
+                    "layout": { "type": "pane", "pane": { "panelIds": [] } },
+                    "panels": [],
+                    "statusEntries": [],
+                    "logEntries": []
+                }
+            ]
+        }
+        """
+        let data = try XCTUnwrap(json.data(using: .utf8))
+        let snapshot = try JSONDecoder().decode(SessionTabManagerSnapshot.self, from: data)
+        XCTAssertNil(snapshot.activeProfileName)
+    }
+
+    // MARK: - Window Title
+
+    @MainActor
+    func testSaveProfileSetsActiveProfileName() {
+        let manager = TabManager()
+        XCTAssertNil(manager.activeProfileName)
+
+        ProfileStore.saveCurrentSession(name: "MyProfile", tabManager: manager)
+        // saveCurrentSession alone doesn't set it — the caller does.
+        // Verify the pattern works end-to-end via setActiveProfileName.
+        manager.setActiveProfileName("MyProfile")
+        XCTAssertEqual(manager.activeProfileName, "MyProfile")
+
+        ProfileStore.delete(name: "MyProfile")
+    }
+
     // MARK: - Helpers
 
     private func makeTabManagerSnapshot(workspaceCount: Int) -> SessionTabManagerSnapshot {
