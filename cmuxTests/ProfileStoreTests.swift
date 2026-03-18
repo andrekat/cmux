@@ -353,6 +353,68 @@ final class ProfileStoreTests: XCTestCase {
         XCTAssertNil(snapshot.activeProfileName)
     }
 
+    // MARK: - Max Profiles Limit
+
+    func testSaveRejectsWhenMaxProfilesReached() {
+        // Fill up to the limit.
+        let limit = ProfileStore.maxProfiles
+        var names: [String] = []
+        for i in 0..<limit {
+            let name = "MaxLimit-\(UUID().uuidString.prefix(8))-\(i)"
+            names.append(name)
+            XCTAssertTrue(
+                ProfileStore.save(Profile(name: name, snapshot: makeTabManagerSnapshot(workspaceCount: 1))),
+                "Should succeed saving profile \(i + 1) of \(limit)"
+            )
+        }
+        defer { for name in names { ProfileStore.delete(name: name) } }
+
+        // One more should fail.
+        let overflow = Profile(name: "MaxLimit-Overflow-\(UUID().uuidString.prefix(8))", snapshot: makeTabManagerSnapshot(workspaceCount: 1))
+        XCTAssertFalse(ProfileStore.save(overflow), "Should reject save beyond max profile limit")
+
+        // But overwriting an existing one should still succeed.
+        var existing = ProfileStore.load(name: names[0])!
+        existing.snapshot = makeTabManagerSnapshot(workspaceCount: 3)
+        existing.updatedAt = Date()
+        XCTAssertTrue(ProfileStore.save(existing), "Overwriting an existing profile should succeed even at the limit")
+
+        let reloaded = ProfileStore.load(name: names[0])
+        XCTAssertEqual(reloaded?.snapshot.workspaces.count, 3)
+    }
+
+    // MARK: - Overwrite Preserves Identity
+
+    @MainActor
+    func testSaveCurrentSessionOverwritePreservesIdAndCreatedAt() {
+        let original = Profile(name: "OverwriteID", snapshot: makeTabManagerSnapshot(workspaceCount: 1))
+        ProfileStore.save(original)
+        defer { ProfileStore.delete(name: "OverwriteID") }
+
+        let originalId = original.id
+        let originalCreatedAt = original.createdAt
+
+        // Simulate a short delay so updatedAt differs.
+        Thread.sleep(forTimeInterval: 0.05)
+
+        // Save again with the same name via saveCurrentSession (uses a fresh TabManager).
+        let manager = TabManager()
+        let overwritten = ProfileStore.saveCurrentSession(name: "OverwriteID", tabManager: manager)
+        XCTAssertNotNil(overwritten)
+        XCTAssertEqual(overwritten?.id, originalId, "Overwrite should preserve the original profile ID")
+        XCTAssertEqual(
+            overwritten?.createdAt.timeIntervalSince1970,
+            originalCreatedAt.timeIntervalSince1970,
+            accuracy: 1.0,
+            "Overwrite should preserve the original createdAt date"
+        )
+        XCTAssertGreaterThan(
+            overwritten!.updatedAt.timeIntervalSince1970,
+            originalCreatedAt.timeIntervalSince1970,
+            "updatedAt should be newer than createdAt after overwrite"
+        )
+    }
+
     // MARK: - Window Title
 
     @MainActor
