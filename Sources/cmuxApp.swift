@@ -1125,7 +1125,7 @@ struct cmuxApp: App {
                         Divider()
 
                         Button(String(localized: "menu.file.profiles.delete", defaultValue: "Delete Profile")) {
-                            confirmDeleteProfile(profile)
+                            confirmDeleteProfile(profile, manager: manager)
                         }
                     }
                 }
@@ -1135,7 +1135,7 @@ struct cmuxApp: App {
                 Divider()
 
                 Button(String(localized: "menu.file.profiles.deleteAll", defaultValue: "Delete All Profiles…")) {
-                    confirmDeleteAllProfiles()
+                    confirmDeleteAllProfiles(manager: manager)
                 }
             }
         }
@@ -1230,7 +1230,7 @@ struct cmuxApp: App {
         }
     }
 
-    private func confirmDeleteProfile(_ profile: Profile) {
+    private func confirmDeleteProfile(_ profile: Profile, manager: TabManager) {
         let alert = NSAlert()
         alert.messageText = String(
             localized: "profile.delete.title",
@@ -1246,12 +1246,17 @@ struct cmuxApp: App {
         guard alert.runModal() == .alertFirstButtonReturn else { return }
 
         ProfileStore.delete(name: profile.name)
+
+        // Clear active profile name so autosave doesn't resurrect the deleted profile.
+        if manager.activeProfileName == profile.name {
+            manager.setActiveProfileName(nil)
+        }
 #if DEBUG
         dlog("profile.delete name=\(profile.name)")
 #endif
     }
 
-    private func confirmDeleteAllProfiles() {
+    private func confirmDeleteAllProfiles(manager: TabManager) {
         let alert = NSAlert()
         alert.messageText = String(
             localized: "profile.deleteAll.title",
@@ -1269,6 +1274,9 @@ struct cmuxApp: App {
         for profile in ProfileStore.list() {
             ProfileStore.delete(name: profile.name)
         }
+
+        // Clear active profile name so autosave doesn't resurrect deleted profiles.
+        manager.setActiveProfileName(nil)
 #if DEBUG
         dlog("profile.deleteAll")
 #endif

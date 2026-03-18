@@ -3539,7 +3539,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
         let saveStart = ProcessInfo.processInfo.systemUptime
 #endif
         _ = saveSessionSnapshot(includeScrollback: false)
-        autosaveActiveProfiles(includeScrollback: true)
+        autosaveActiveProfiles(includeScrollback: false)
 #if DEBUG
         saveMs = (ProcessInfo.processInfo.systemUptime - saveStart) * 1000.0
 #endif

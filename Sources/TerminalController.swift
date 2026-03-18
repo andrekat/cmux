@@ -2510,6 +2510,10 @@ class TerminalController {
             "app.focus_override.set",
             "app.simulate_active",
             "markdown.open",
+            "profile.list",
+            "profile.save",
+            "profile.load",
+            "profile.delete",
             "browser.open_split",
             "browser.navigate",
             "browser.back",
@@ -7292,7 +7296,14 @@ class TerminalController {
             return .err(code: "delete_failed", message: "Failed to delete profile '\(name)'", data: nil)
         }
 
-        return .ok(["name": name, "deleted": true])
+        // Clear active profile name so autosave doesn't resurrect the deleted profile.
+        var result: V2CallResult = .ok(["name": name, "deleted": true])
+        v2MainSync {
+            if let tabManager, tabManager.activeProfileName == name {
+                tabManager.setActiveProfileName(nil)
+            }
+        }
+        return result
     }
 
     // MARK: - Browser
@@ -11015,6 +11026,10 @@ class TerminalController {
         }
         guard ProfileStore.delete(name: name) else {
             return "ERROR: Failed to delete profile '\(name)'"
+        }
+        // Clear active profile name so autosave doesn't resurrect the deleted profile.
+        if let tabManager, tabManager.activeProfileName == name {
+            tabManager.setActiveProfileName(nil)
         }
         return "OK: Profile '\(name)' deleted"
     }

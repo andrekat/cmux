@@ -79,13 +79,15 @@ enum ProfileStore {
         }
 
         // Enforce max profile limit (don't count existing profile being overwritten).
+        // Use sanitized filenames for collision detection since that's how files are stored.
         let existing = list()
-        let isOverwrite = existing.contains { $0.name == profile.name }
+        guard let targetFileURL = profileFileURL(for: profile.name) else { return false }
+        let isOverwrite = existing.contains { profileFileURL(for: $0.name) == targetFileURL }
         if !isOverwrite && existing.count >= maxProfiles {
             return false
         }
 
-        guard let fileURL = profileFileURL(for: profile.name) else { return false }
+        let fileURL = targetFileURL
 
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .secondsSince1970
@@ -145,12 +147,15 @@ enum ProfileStore {
             return nil
         }
 
-        // Delete old file first (the filename is derived from the name).
-        delete(name: oldName)
-
+        // Save the new file first, then delete the old one to avoid data loss.
         profile.name = trimmedNew
         profile.updatedAt = Date()
         guard save(profile) else { return nil }
+
+        // Only delete the old file if the sanitized names differ (otherwise save already overwrote it).
+        if sanitizedFileName(oldName) != sanitizedFileName(trimmedNew) {
+            delete(name: oldName)
+        }
         return profile
     }
 
