@@ -26,7 +26,7 @@ func cmuxCurrentSurfaceFontSizePoints(_ surface: ghostty_surface_t) -> Float? {
         return nil
     }
 
-    let ctFont = Unmanaged<CTFont>.fromOpaque(quicklookFont).takeRetainedValue()
+    let ctFont = Unmanaged<CTFont>.fromOpaque(quicklookFont).takeUnretainedValue()
     let points = Float(CTFontGetSize(ctFont))
     guard points > 0 else { return nil }
     return points
@@ -4506,11 +4506,41 @@ enum SidebarPullRequestStatus: String {
     case closed
 }
 
+enum SidebarPullRequestChecksStatus: String {
+    case pass
+    case fail
+    case pending
+}
+
+private func normalizedSidebarBranchName(_ branch: String?) -> String? {
+    guard let branch else { return nil }
+    let trimmed = branch.trimmingCharacters(in: .whitespacesAndNewlines)
+    return trimmed.isEmpty ? nil : trimmed
+}
+
 struct SidebarPullRequestState: Equatable {
     let number: Int
     let label: String
     let url: URL
     let status: SidebarPullRequestStatus
+    let branch: String?
+    let checks: SidebarPullRequestChecksStatus?
+
+    init(
+        number: Int,
+        label: String,
+        url: URL,
+        status: SidebarPullRequestStatus,
+        branch: String? = nil,
+        checks: SidebarPullRequestChecksStatus? = nil
+    ) {
+        self.number = number
+        self.label = label
+        self.url = url
+        self.status = status
+        self.branch = normalizedSidebarBranchName(branch)
+        self.checks = checks
+    }
 }
 
 enum SidebarBranchOrdering {
@@ -4606,6 +4636,15 @@ enum SidebarBranchOrdering {
             }
         }
 
+        func checksPriority(_ checks: SidebarPullRequestChecksStatus?) -> Int {
+            switch checks {
+            case .fail: return 3
+            case .pending: return 2
+            case .pass: return 1
+            case nil: return 0
+            }
+        }
+
         func normalizedReviewURLKey(for url: URL) -> String {
             guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
                 return url.absoluteString
@@ -4641,6 +4680,9 @@ enum SidebarBranchOrdering {
             }
             guard let existing = pullRequestsByKey[key] else { continue }
             if statusPriority(state.status) > statusPriority(existing.status) {
+                pullRequestsByKey[key] = state
+            } else if state.status == existing.status,
+                      checksPriority(state.checks) > checksPriority(existing.checks) {
                 pullRequestsByKey[key] = state
             }
         }
@@ -5164,8 +5206,10 @@ final class Workspace: Identifiable, ObservableObject {
     /// Prevents repeated close gestures (e.g., middle-click spam) from stacking dialogs.
     private var pendingCloseConfirmTabIds: Set<TabID> = []
 
-    /// Tab IDs whose next close attempt came from an explicit user close gesture
-    /// (Cmd+W or the tab-strip X button), rather than an internal close/move flow.
+    /// Tab IDs whose next close attempt should be treated as an explicit
+    /// workspace-close gesture from the user (the tab-strip X button, or Cmd+W when
+    /// the shortcut preference is set to close the workspace on the last surface),
+    /// rather than an internal close/move flow.
     private var explicitUserCloseTabIds: Set<TabID> = []
 
     /// Deterministic tab selection to apply after a tab closes.
@@ -5199,6 +5243,8 @@ final class Workspace: Identifiable, ObservableObject {
     private var layoutFollowUpBrowserPanelId: UUID?
     private var layoutFollowUpBrowserExitFocusPanelId: UUID?
     private var layoutFollowUpNeedsGeometryPass = false
+    private var layoutFollowUpAttemptScheduled = false
+    private var layoutFollowUpStalledAttemptCount = 0
     private var isAttemptingLayoutFollowUp = false
     private var isNormalizingPinnedTabOrder = false
     private var pendingNonFocusSplitFocusReassert: PendingNonFocusSplitFocusReassert?
@@ -5303,7 +5349,8 @@ final class Workspace: Identifiable, ObservableObject {
             return preferredProfileID
         }
         if let sourcePanelId,
-           let sourceBrowserPanel = browserPanel(for: sourcePanelId) {
+           let sourceBrowserPanel = browserPanel(for: sourcePanelId),
+           BrowserProfileStore.shared.profileDefinition(id: sourceBrowserPanel.profileID) != nil {
             return sourceBrowserPanel.profileID
         }
         if let preferredBrowserProfileID,
@@ -5666,8 +5713,15 @@ final class Workspace: Identifiable, ObservableObject {
     func updatePanelGitBranch(panelId: UUID, branch: String, isDirty: Bool) {
         let state = SidebarGitBranchState(branch: branch, isDirty: isDirty)
         let existing = panelGitBranches[panelId]
+        let branchChanged = existing?.branch != nil && existing?.branch != branch
         if existing?.branch != branch || existing?.isDirty != isDirty {
             panelGitBranches[panelId] = state
+        }
+        if branchChanged {
+            panelPullRequests.removeValue(forKey: panelId)
+            if panelId == focusedPanelId {
+                pullRequest = nil
+            }
         }
         if panelId == focusedPanelId {
             gitBranch = state
@@ -5676,8 +5730,10 @@ final class Workspace: Identifiable, ObservableObject {
 
     func clearPanelGitBranch(panelId: UUID) {
         panelGitBranches.removeValue(forKey: panelId)
+        panelPullRequests.removeValue(forKey: panelId)
         if panelId == focusedPanelId {
             gitBranch = nil
+            pullRequest = nil
         }
     }
 
@@ -5686,10 +5742,50 @@ final class Workspace: Identifiable, ObservableObject {
         number: Int,
         label: String,
         url: URL,
-        status: SidebarPullRequestStatus
+        status: SidebarPullRequestStatus,
+        branch: String? = nil,
+        checks: SidebarPullRequestChecksStatus? = nil
     ) {
-        let state = SidebarPullRequestState(number: number, label: label, url: url, status: status)
         let existing = panelPullRequests[panelId]
+        let normalizedBranch = normalizedSidebarBranchName(branch)
+        let currentPanelBranch = normalizedSidebarBranchName(panelGitBranches[panelId]?.branch)
+        let resolvedBranch: String? = {
+            if let normalizedBranch {
+                return normalizedBranch
+            }
+            if let currentPanelBranch {
+                return currentPanelBranch
+            }
+            guard let existing,
+                  existing.number == number,
+                  existing.label == label,
+                  existing.url == url,
+                  existing.status == status else {
+                return nil
+            }
+            return existing.branch
+        }()
+        let resolvedChecks: SidebarPullRequestChecksStatus? = {
+            if let checks {
+                return checks
+            }
+            guard let existing,
+                  existing.number == number,
+                  existing.label == label,
+                  existing.url == url,
+                  existing.status == status else {
+                return nil
+            }
+            return existing.checks
+        }()
+        let state = SidebarPullRequestState(
+            number: number,
+            label: label,
+            url: url,
+            status: status,
+            branch: resolvedBranch,
+            checks: resolvedChecks
+        )
         if existing != state {
             panelPullRequests[panelId] = state
         }
@@ -5868,10 +5964,16 @@ final class Workspace: Identifiable, ObservableObject {
     }
 
     func sidebarPullRequestsInDisplayOrder(orderedPanelIds: [UUID]) -> [SidebarPullRequestState] {
-        SidebarBranchOrdering.orderedUniquePullRequests(
+        let validPanelPullRequests = panelPullRequests.filter { panelId, state in
+            guard let pullRequestBranch = normalizedSidebarBranchName(state.branch) else {
+                return true
+            }
+            return normalizedSidebarBranchName(panelGitBranches[panelId]?.branch) == pullRequestBranch
+        }
+        return SidebarBranchOrdering.orderedUniquePullRequests(
             orderedPanelIds: orderedPanelIds,
-            panelPullRequests: panelPullRequests,
-            fallbackPullRequest: pullRequest
+            panelPullRequests: validPanelPullRequests,
+            fallbackPullRequest: nil
         )
     }
 
@@ -6644,7 +6746,6 @@ final class Workspace: Identifiable, ObservableObject {
         )
         panels[browserPanel.id] = browserPanel
         panelTitles[browserPanel.id] = browserPanel.displayTitle
-        setPreferredBrowserProfileID(browserPanel.profileID)
 
         // Pre-generate the bonsplit tab ID so the mapping exists before the split lands.
         let newTab = Bonsplit.Tab(
@@ -6668,6 +6769,7 @@ final class Workspace: Identifiable, ObservableObject {
             panelTitles.removeValue(forKey: browserPanel.id)
             return nil
         }
+        setPreferredBrowserProfileID(browserPanel.profileID)
 
         // See newTerminalSplit: suppress old view's becomeFirstResponder during reparenting.
         let previousHostedView = focusedTerminalPanel?.hostedView
@@ -6705,12 +6807,16 @@ final class Workspace: Identifiable, ObservableObject {
         bypassInsecureHTTPHostOnce: String? = nil
     ) -> BrowserPanel? {
         let shouldFocusNewTab = focus ?? (bonsplitController.focusedPaneId == paneId)
+        let sourcePanelId = effectiveSelectedPanelId(inPane: paneId)
         let previousFocusedPanelId = focusedPanelId
         let previousHostedView = focusedTerminalPanel?.hostedView
 
         let browserPanel = BrowserPanel(
             workspaceId: id,
-            profileID: resolvedNewBrowserProfileID(preferredProfileID: preferredProfileID),
+            profileID: resolvedNewBrowserProfileID(
+                preferredProfileID: preferredProfileID,
+                sourcePanelId: sourcePanelId
+            ),
             initialURL: url,
             bypassInsecureHTTPHostOnce: bypassInsecureHTTPHostOnce,
             proxyEndpoint: remoteProxyEndpoint,
@@ -6719,7 +6825,6 @@ final class Workspace: Identifiable, ObservableObject {
         )
         panels[browserPanel.id] = browserPanel
         panelTitles[browserPanel.id] = browserPanel.displayTitle
-        setPreferredBrowserProfileID(browserPanel.profileID)
 
         guard let newTabId = bonsplitController.createTab(
             title: browserPanel.displayTitle,
@@ -6736,6 +6841,7 @@ final class Workspace: Identifiable, ObservableObject {
         }
 
         surfaceIdToPanelId[newTabId] = browserPanel.id
+        setPreferredBrowserProfileID(browserPanel.profileID)
 
         // Keyboard/browser-open paths want "new tab at end" regardless of global new-tab placement.
         if insertAtEnd {
@@ -7949,6 +8055,7 @@ final class Workspace: Identifiable, ObservableObject {
             layoutFollowUpTerminalFocusPanelId = terminalFocusPanelId
         }
         layoutFollowUpNeedsGeometryPass = layoutFollowUpNeedsGeometryPass || includeGeometry
+        layoutFollowUpStalledAttemptCount = 0
 
         if layoutFollowUpTimeoutWorkItem == nil {
             installLayoutFollowUpObservers()
@@ -7960,10 +8067,8 @@ final class Workspace: Identifiable, ObservableObject {
     private func installLayoutFollowUpObservers() {
         guard layoutFollowUpTimeoutWorkItem == nil else { return }
 
-        func enqueueAttempt() {
-            DispatchQueue.main.async { [weak self] in
-                self?.attemptEventDrivenLayoutFollowUp()
-            }
+        let enqueueAttempt: () -> Void = { [weak self] in
+            self?.scheduleLayoutFollowUpAttempt()
         }
 
         layoutFollowUpObservers.append(NotificationCenter.default.addObserver(
@@ -8043,6 +8148,28 @@ final class Workspace: Identifiable, ObservableObject {
         layoutFollowUpBrowserPanelId = nil
         layoutFollowUpBrowserExitFocusPanelId = nil
         layoutFollowUpNeedsGeometryPass = false
+        layoutFollowUpAttemptScheduled = false
+        layoutFollowUpStalledAttemptCount = 0
+    }
+
+    private func scheduleLayoutFollowUpAttempt() {
+        guard layoutFollowUpTimeoutWorkItem != nil else { return }
+        guard !layoutFollowUpAttemptScheduled else { return }
+
+        layoutFollowUpAttemptScheduled = true
+        let delay = layoutFollowUpBackoffDelay()
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+            guard let self else { return }
+            self.layoutFollowUpAttemptScheduled = false
+            self.attemptEventDrivenLayoutFollowUp()
+        }
+    }
+
+    private func layoutFollowUpBackoffDelay() -> TimeInterval {
+        guard layoutFollowUpStalledAttemptCount > 0 else { return 0 }
+        let baseDelay: TimeInterval = 0.01
+        let exponent = min(layoutFollowUpStalledAttemptCount - 1, 5)
+        return min(0.25, baseDelay * pow(2.0, Double(exponent)))
     }
 
     private func flushWorkspaceWindowLayouts() {
@@ -8080,12 +8207,35 @@ final class Workspace: Identifiable, ObservableObject {
         return !selectionConverged || !browserPortalAnchorReady(for: browserPanel)
     }
 
+    private func terminalFocusNeedsFollowUp() -> Bool {
+        guard let panelId = layoutFollowUpTerminalFocusPanelId,
+              let terminalPanel = terminalPanel(for: panelId) else {
+            return false
+        }
+        return focusedPanelId != panelId || !terminalPanel.hostedView.isSurfaceViewFirstResponder()
+    }
+
+    private func browserPanelNeedsFollowUp() -> Bool {
+        guard let panelId = layoutFollowUpBrowserPanelId,
+              let browserPanel = browserPanel(for: panelId) else {
+            return false
+        }
+        return !browserPortalReady(for: browserPanel)
+    }
+
     private func attemptEventDrivenLayoutFollowUp() {
         guard layoutFollowUpTimeoutWorkItem != nil, !isAttemptingLayoutFollowUp else { return }
         isAttemptingLayoutFollowUp = true
         defer { isAttemptingLayoutFollowUp = false }
 
         flushWorkspaceWindowLayouts()
+
+        let geometryPendingBefore = layoutFollowUpNeedsGeometryPass
+        let terminalPortalPendingBefore = terminalPortalVisibilityNeedsFollowUp()
+        let browserVisibilityPendingBefore = browserPortalVisibilityNeedsFollowUp()
+        let terminalFocusPendingBefore = terminalFocusNeedsFollowUp()
+        let browserPanelPendingBefore = browserPanelNeedsFollowUp()
+        let browserExitPendingBefore = layoutFollowUpBrowserExitFocusPanelId != nil
 
         if layoutFollowUpNeedsGeometryPass {
             layoutFollowUpNeedsGeometryPass = reconcileTerminalGeometryPass()
@@ -8112,14 +8262,20 @@ final class Workspace: Identifiable, ObservableObject {
 
         if let browserPanelId = layoutFollowUpBrowserPanelId {
             if let browserPanel = browserPanel(for: browserPanelId) {
-                if browserPortalAnchorReady(for: browserPanel) {
+                let anchorReady = browserPortalAnchorReady(for: browserPanel)
+                let wasReady = browserPortalReady(for: browserPanel)
+                if anchorReady && !wasReady {
                     BrowserWindowPortalRegistry.synchronizeForAnchor(browserPanel.portalAnchorView)
+                }
+                let isReady = browserPortalReady(for: browserPanel)
+                if isReady,
+                   (!wasReady || BrowserWindowPortalRegistry.debugSnapshot(for: browserPanel.webView)?.containerHidden == true) {
                     BrowserWindowPortalRegistry.refresh(
                         webView: browserPanel.webView,
                         reason: reason
                     )
                 }
-                if browserPortalReady(for: browserPanel) {
+                if isReady {
                     layoutFollowUpBrowserPanelId = nil
                 }
             } else {
@@ -8140,20 +8296,8 @@ final class Workspace: Identifiable, ObservableObject {
             }
         }
 
-        let terminalFocusPending: Bool = {
-            guard let panelId = layoutFollowUpTerminalFocusPanelId,
-                  let terminalPanel = terminalPanel(for: panelId) else {
-                return false
-            }
-            return focusedPanelId != panelId || !terminalPanel.hostedView.isSurfaceViewFirstResponder()
-        }()
-        let browserPanelPending: Bool = {
-            guard let panelId = layoutFollowUpBrowserPanelId,
-                  let browserPanel = browserPanel(for: panelId) else {
-                return false
-            }
-            return !browserPortalReady(for: browserPanel)
-        }()
+        let terminalFocusPending = terminalFocusNeedsFollowUp()
+        let browserPanelPending = browserPanelNeedsFollowUp()
         let browserExitPending = layoutFollowUpBrowserExitFocusPanelId != nil
         let needsMoreWork =
             layoutFollowUpNeedsGeometryPass ||
@@ -8165,6 +8309,22 @@ final class Workspace: Identifiable, ObservableObject {
 
         if !needsMoreWork {
             clearLayoutFollowUp()
+            return
+        }
+
+        let didMakeProgress =
+            (geometryPendingBefore && !layoutFollowUpNeedsGeometryPass) ||
+            (terminalPortalPendingBefore && !terminalPortalPending) ||
+            (browserVisibilityPendingBefore && !browserVisibilityPending) ||
+            (terminalFocusPendingBefore && !terminalFocusPending) ||
+            (browserPanelPendingBefore && !browserPanelPending) ||
+            (browserExitPendingBefore && !browserExitPending)
+
+        if didMakeProgress {
+            layoutFollowUpStalledAttemptCount = 0
+            scheduleLayoutFollowUpAttempt()
+        } else {
+            layoutFollowUpStalledAttemptCount += 1
         }
     }
 
@@ -8238,19 +8398,30 @@ final class Workspace: Identifiable, ObservableObject {
         return visiblePanelIds
     }
 
-    private func reconcileTerminalPortalVisibilityForCurrentRenderedLayout() {
+    @discardableResult
+    private func reconcileTerminalPortalVisibilityForCurrentRenderedLayout() -> Bool {
         let visiblePanelIds = renderedVisiblePanelIdsForCurrentLayout()
+        var didChange = false
 
         for panel in panels.values {
             guard let terminalPanel = panel as? TerminalPanel else { continue }
             let shouldBeVisible = visiblePanelIds.contains(terminalPanel.id)
-            terminalPanel.hostedView.setVisibleInUI(shouldBeVisible)
-            terminalPanel.hostedView.setActive(shouldBeVisible && focusedPanelId == terminalPanel.id)
+            if terminalPanel.hostedView.debugPortalVisibleInUI != shouldBeVisible {
+                terminalPanel.hostedView.setVisibleInUI(shouldBeVisible)
+                didChange = true
+            }
+            let shouldBeActive = shouldBeVisible && focusedPanelId == terminalPanel.id
+            if terminalPanel.hostedView.debugPortalActive != shouldBeActive {
+                terminalPanel.hostedView.setActive(shouldBeActive)
+                didChange = true
+            }
             TerminalWindowPortalRegistry.updateEntryVisibility(
                 for: terminalPanel.hostedView,
                 visibleInUI: shouldBeVisible
             )
         }
+
+        return didChange
     }
 
     private func terminalPortalVisibilityNeedsFollowUp() -> Bool {
@@ -8273,43 +8444,65 @@ final class Workspace: Identifiable, ObservableObject {
         return false
     }
 
-    private func reconcileBrowserPortalVisibilityForCurrentRenderedLayout(reason: String) {
+    @discardableResult
+    private func reconcileBrowserPortalVisibilityForCurrentRenderedLayout(reason: String) -> Bool {
         let visiblePanelIds = renderedVisiblePanelIdsForCurrentLayout()
+        var didChange = false
 
         for panel in panels.values {
             guard let browserPanel = panel as? BrowserPanel else { continue }
             let shouldBeVisible = visiblePanelIds.contains(browserPanel.id)
+            let anchorView = browserPanel.portalAnchorView
+            let snapshot = BrowserWindowPortalRegistry.debugSnapshot(for: browserPanel.webView)
             if shouldBeVisible {
-                BrowserWindowPortalRegistry.updateEntryVisibility(
-                    for: browserPanel.webView,
-                    visibleInUI: true,
-                    zPriority: 2
-                )
-                let anchorView = browserPanel.portalAnchorView
-                let anchorReady =
-                    anchorView.window != nil &&
-                    anchorView.superview != nil &&
-                    anchorView.bounds.width > 1 &&
-                    anchorView.bounds.height > 1
-                if anchorReady {
+                if snapshot?.visibleInUI == false {
+                    BrowserWindowPortalRegistry.updateEntryVisibility(
+                        for: browserPanel.webView,
+                        visibleInUI: true,
+                        zPriority: 2
+                    )
+                    didChange = true
+                }
+                let anchorReady = browserPortalAnchorReady(for: browserPanel)
+                let portalReady = browserPortalReady(for: browserPanel)
+                if anchorReady && !portalReady {
                     BrowserWindowPortalRegistry.synchronizeForAnchor(anchorView)
+                    if browserPortalReady(for: browserPanel) {
+                        BrowserWindowPortalRegistry.refresh(
+                            webView: browserPanel.webView,
+                            reason: reason
+                        )
+                        didChange = true
+                    }
+                } else if anchorReady && snapshot?.containerHidden == true {
                     BrowserWindowPortalRegistry.refresh(
                         webView: browserPanel.webView,
                         reason: reason
                     )
+                    didChange = true
                 }
             } else {
-                BrowserWindowPortalRegistry.updateEntryVisibility(
-                    for: browserPanel.webView,
-                    visibleInUI: false,
-                    zPriority: 0
-                )
-                BrowserWindowPortalRegistry.hide(
-                    webView: browserPanel.webView,
-                    source: reason
-                )
+                let portalNeedsHide =
+                    snapshot?.visibleInUI == true ||
+                    snapshot?.containerHidden == false
+                if portalNeedsHide {
+                    if snapshot?.visibleInUI == true {
+                        BrowserWindowPortalRegistry.updateEntryVisibility(
+                            for: browserPanel.webView,
+                            visibleInUI: false,
+                            zPriority: 0
+                        )
+                    }
+                    BrowserWindowPortalRegistry.hide(
+                        webView: browserPanel.webView,
+                        source: reason
+                    )
+                    didChange = true
+                }
             }
         }
+
+        return didChange
     }
 
     private func browserPortalVisibilityNeedsFollowUp() -> Bool {
