@@ -699,6 +699,7 @@ class TabManager: ObservableObject {
 
     func setActiveProfileName(_ name: String?) {
         activeProfileName = name
+        updateWindowTitleForSelectedTab()
     }
 
     /// Global monotonically increasing counter for CMUX_PORT ordinal assignment.

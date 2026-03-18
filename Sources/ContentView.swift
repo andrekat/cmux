@@ -9239,7 +9239,8 @@ private struct SidebarFooterButtons: View {
             SidebarHelpMenuButton(onSendFeedback: onSendFeedback)
             UpdatePill(model: updateViewModel)
             Spacer(minLength: 0)
-            if let name = activeProfileName {
+            if let name = activeProfileName,
+               !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 SidebarActiveProfileBadge(name: name)
             }
         }
