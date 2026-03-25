@@ -2,6 +2,18 @@
 
 All notable changes to cmux are documented here.
 
+## [0.63.0] - 2026-03-25
+
+### Added
+- **Profiles** — save and restore workspace layouts as named profiles (File > Profiles). Profiles auto-save on the 8-second timer and at app termination. Socket commands: `profile_save`, `profile_load`, `profile_delete`, `profile_list` (v1 and v2) ([d7b2d1f](https://github.com/manaflow-ai/cmux/commit/d7b2d1f5))
+- Active profile name persists across restarts and shows in the window title ([ed841eb](https://github.com/manaflow-ai/cmux/commit/ed841eb1))
+- Profile i18n keys for 18 languages ([187a59c](https://github.com/manaflow-ai/cmux/commit/187a59c6))
+
+### Fixed
+- Fix crash in v1 socket `profile_save`/`profile_load`/`profile_delete` commands caused by accessing `@MainActor` TabManager from the socket background thread without synchronization. `profile_save` also raced with clipboard changes from other apps by accessing `NSPasteboard.general` off-main ([2a96624](https://github.com/manaflow-ai/cmux/commit/2a966245))
+- Refresh window title on profile name change, guard empty badge name ([be9eaa2](https://github.com/manaflow-ai/cmux/commit/be9eaa26))
+- Sanitized profile name collisions, rename safety, delete clears active profile ([86c9efc](https://github.com/manaflow-ai/cmux/commit/86c9efcd))
+
 ## [0.62.2] - 2026-03-14
 
 ### Added
