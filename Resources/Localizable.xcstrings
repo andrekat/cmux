@@ -14236,6 +14236,1136 @@
         }
       }
     },
+    "dialog.cmuxConfig.confirmCommand.cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إلغاء"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otkaži"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuller"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャンセル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "취소"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avbryt"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anuluj"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отмена"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ยกเลิก"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İptal"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "dialog.cmuxConfig.confirmCommand.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هل أنت متأكد أنك تريد تشغيل هذا الأمر؟"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeste li sigurni da želite pokrenuti ovu naredbu?"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Er du sikker på, at du vil køre denne kommando?"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Möchten Sie diesen Befehl wirklich ausführen?"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Are you sure you want to run this command?"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Estás seguro de que deseas ejecutar este comando?"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Êtes-vous sûr de vouloir exécuter cette commande ?"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sei sicuro di voler eseguire questo comando?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このコマンドを実行してもよろしいですか？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 명령을 실행하시겠습니까?"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Er du sikker på at du vil kjøre denne kommandoen?"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Czy na pewno chcesz uruchomić to polecenie?"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tem certeza de que deseja executar este comando?"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вы уверены, что хотите выполнить эту команду?"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คุณแน่ใจหรือไม่ว่าต้องการรันคำสั่งนี้?"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu komutu çalıştırmak istediğinizden emin misiniz?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要运行此命令吗？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "確定要執行此命令嗎？"
+          }
+        }
+      }
+    },
+    "dialog.cmuxConfig.confirmCommand.run": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تشغيل"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokreni"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kør"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausführen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Run"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ejecutar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exécuter"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esegui"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "実行"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "실행"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kjør"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uruchom"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выполнить"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รัน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çalıştır"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "執行"
+          }
+        }
+      }
+    },
+    "dialog.cmuxConfig.confirmCommand.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تشغيل الأمر"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokreni naredbu"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kør kommando"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Befehl ausführen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Run Command"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ejecutar comando"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exécuter la commande"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esegui comando"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コマンドを実行"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "명령 실행"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kjør kommando"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uruchom polecenie"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executar comando"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выполнить команду"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รันคำสั่ง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Komutu Çalıştır"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行命令"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "執行命令"
+          }
+        }
+      }
+    },
+    "dialog.cmuxConfig.confirmRestart.cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إلغاء"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otkaži"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuller"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャンセル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "취소"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avbryt"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anuluj"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отмена"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ยกเลิก"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İptal"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "dialog.cmuxConfig.confirmRestart.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مساحة العمل بهذا الاسم موجودة بالفعل. هل تريد إغلاقها وإنشاء واحدة جديدة؟"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radni prostor s ovim imenom već postoji. Zatvoriti ga i kreirati novi?"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Et arbejdsområde med dette navn eksisterer allerede. Luk det og opret et nyt?"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ein Arbeitsbereich mit diesem Namen existiert bereits. Schließen und neu erstellen?"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A workspace with this name already exists. Close it and create a new one?"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya existe un espacio de trabajo con este nombre. ¿Cerrarlo y crear uno nuevo?"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un espace de travail portant ce nom existe déjà. Le fermer et en créer un nouveau ?"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esiste già un'area di lavoro con questo nome. Chiuderla e crearne una nuova?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "この名前のワークスペースは既に存在します。閉じて新しく作成しますか？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "같은 이름의 워크스페이스가 이미 있습니다. 닫고 새로 만드시겠습니까?"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Et arbeidsområde med dette navnet finnes allerede. Lukke det og opprette et nytt?"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przestrzeń robocza o tej nazwie już istnieje. Zamknąć ją i utworzyć nową?"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um espaço de trabalho com este nome já existe. Fechar e criar um novo?"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рабочая область с таким именем уже существует. Закрыть её и создать новую?"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "พื้นที่ทำงานที่มีชื่อนี้มีอยู่แล้ว ปิดและสร้างใหม่หรือไม่?"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu adda bir çalışma alanı zaten var. Kapatıp yenisini oluşturulsun mu?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "同名工作区已存在。关闭并新建吗？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "同名工作區已存在。關閉並新建嗎？"
+          }
+        }
+      }
+    },
+    "dialog.cmuxConfig.confirmRestart.recreate": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إعادة إنشاء"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ponovo kreiraj"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Genskab"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neu erstellen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recreate"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recrear"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recréer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ricrea"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再作成"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다시 만들기"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opprett på nytt"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utwórz ponownie"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recriar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пересоздать"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "สร้างใหม่"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yeniden Oluştur"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新创建"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新建立"
+          }
+        }
+      }
+    },
+    "dialog.cmuxConfig.confirmRestart.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مساحة العمل موجودة بالفعل"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radni prostor već postoji"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arbejdsområdet eksisterer allerede"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arbeitsbereich existiert bereits"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Workspace Already Exists"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El espacio de trabajo ya existe"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L'espace de travail existe déjà"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L'area di lavoro esiste già"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ワークスペースは既に存在します"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "워크스페이스가 이미 존재합니다"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arbeidsområdet finnes allerede"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przestrzeń robocza już istnieje"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O espaço de trabalho já existe"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рабочая область уже существует"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "พื้นที่ทำงานมีอยู่แล้ว"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çalışma Alanı Zaten Var"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "工作区已存在"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "工作區已存在"
+          }
+        }
+      }
+    },
+    "command.cmuxConfig.subtitle": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmux.json"
+          }
+        }
+      }
+    },
+    "command.cmuxConfig.customTitle": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مخصص: %@"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prilagođeno: %@"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brugerdefineret: %@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Benutzerdefiniert: %@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom: %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personalizado: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personnalisé : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personalizzato: %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カスタム: %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사용자 정의: %@"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Egendefinert: %@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Niestandardowe: %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personalizado: %@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пользовательское: %@"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กำหนดเอง: %@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Özel: %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自定义: %@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自訂: %@"
+          }
+        }
+      }
+    },
     "command.equalizeSplits.title": {
       "extractionState": "manual",
       "localizations": {
@@ -29616,6 +30746,23 @@
         }
       }
     },
+    "dialog.closeTab.messageNamed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This will close \"%@\"."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「%@」を閉じます。"
+          }
+        }
+      }
+    },
     "dialog.closeTab.title": {
       "extractionState": "manual",
       "localizations": {
@@ -29810,6 +30957,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "現在のウィンドウと、その %1$lld 個のワークスペースと、それぞれのすべてのパネルを閉じます:\n%2$@"
+          }
+        }
+      }
+    },
+    "dialog.closePinnedWorkspace.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This workspace is pinned. Closing it will close the workspace and all of its panels."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このワークスペースはピン留めされています。閉じると、このワークスペースとその中のすべてのパネルが閉じます。"
+          }
+        }
+      }
+    },
+    "dialog.closePinnedWorkspace.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close pinned workspace?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ピン留めされたワークスペースを閉じますか？"
           }
         }
       }
@@ -43331,6 +44512,57 @@
           "stringUnit": {
             "state": "translated",
             "value": "フォーカス中のサーフェスがそのワークスペースの最後の1つでも、サーフェスを閉じるショートカットはサーフェスだけを閉じ、ワークスペースは残します。ワークスペースを閉じるショートカットを使うと明示的に閉じられます。"
+          }
+        }
+      }
+    },
+    "settings.app.paneFirstClickFocus": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Focus Pane on First Click"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最初のクリックでペインにフォーカス"
+          }
+        }
+      }
+    },
+    "settings.app.paneFirstClickFocus.subtitleOff": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When cmux is inactive, the first click only activates the window. Click again to focus the pane."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmuxが非アクティブのとき、最初のクリックはウインドウをアクティブにするだけです。ペインにフォーカスするにはもう一度クリックします。"
+          }
+        }
+      }
+    },
+    "settings.app.paneFirstClickFocus.subtitleOn": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When cmux is inactive, clicking a pane activates the window and focuses that pane in one click."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cmuxが非アクティブのとき、ペインをクリックすると1回でウインドウをアクティブにしてそのペインへフォーカスします。"
           }
         }
       }
@@ -57293,13 +58525,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Show Cmd/Ctrl-Hold Shortcut Hints"
+            "value": "Show Shortcut Hints While Holding Modifiers"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cmd/Ctrl長押しのショートカットヒントを表示"
+            "value": "修飾キー長押しでショートカットヒントを表示"
           }
         },
         "zh-Hans": {
@@ -57406,13 +58638,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Holding Cmd or Ctrl keeps shortcut hint pills hidden."
+            "value": "Holding shortcut modifiers keeps shortcut hint pills hidden."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "CmdまたはCtrlを長押ししてもショートカットヒントピルは非表示のままです。"
+            "value": "ショートカットの修飾キーを長押ししてもショートカットヒントピルは非表示のままです。"
           }
         },
         "zh-Hans": {
@@ -57519,13 +58751,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Holding Cmd (sidebar/titlebar) or Ctrl/Cmd (pane tabs) shows shortcut hint pills."
+            "value": "Holding the configured shortcut modifiers shows shortcut hint pills."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cmd（サイドバー/タイトルバー）またはCtrl/Cmd（ペインタブ）を長押しするとショートカットヒントピルが表示されます。"
+            "value": "設定されたショートカットの修飾キーを長押しするとショートカットヒントピルが表示されます。"
           }
         },
         "zh-Hans": {
@@ -61355,6 +62587,40 @@
         }
       }
     },
+    "shortcut.selectSurfaceByNumber.label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select Surface 1…9"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サーフェス 1…9 を選択"
+          }
+        }
+      }
+    },
+    "shortcut.selectWorkspaceByNumber.label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select Workspace 1…9"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ワークスペース 1…9 を選択"
+          }
+        }
+      }
+    },
     "shortcut.showBrowserJSConsole.label": {
       "extractionState": "manual",
       "localizations": {
@@ -62594,6 +63860,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Çalışma Alanını Kapat"
+          }
+        }
+      }
+    },
+    "sidebar.pinnedWorkspaceProtected.tooltip": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pinned workspace. Closing requires confirmation."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ピン留めされたワークスペースです。閉じるには確認が必要です。"
           }
         }
       }
@@ -74831,6 +76114,23 @@
         }
       }
     },
+    "workspace.closeProtected.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pinned workspaces can't be closed while pinned. Unpin the workspace first."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ピン留めされたワークスペースは閉じられません。先にピンを外してください。"
+          }
+        }
+      }
+    },
     "workspace.placement.afterCurrent": {
       "extractionState": "manual",
       "localizations": {
@@ -77464,228 +78764,166 @@
         }
       }
     },
-    "menu.file.profiles": {
+    "menu.openInIntelliJ": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profiles"
+            "value": "Open Current Directory in IntelliJ IDEA"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "プロファイル"
+            "value": "現在のディレクトリを IntelliJ IDEA で開く"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "配置"
+            "value": "在 IntelliJ IDEA 中打开当前目录"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "設定檔"
+            "value": "在 IntelliJ IDEA 中開啟目前目錄"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "프로필"
+            "value": "현재 디렉토리를 IntelliJ IDEA에서 열기"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profile"
+            "value": "Aktuelles Verzeichnis in IntelliJ IDEA öffnen"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Perfiles"
+            "value": "Abrir directorio actual en IntelliJ IDEA"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profils"
+            "value": "Ouvrir le répertoire courant dans IntelliJ IDEA"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profili"
+            "value": "Apri la directory corrente in IntelliJ IDEA"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profiler"
+            "value": "Åbn nuværende mappe i IntelliJ IDEA"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profile"
+            "value": "Otwórz bieżący katalog w IntelliJ IDEA"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Профили"
+            "value": "Открыть текущий каталог в IntelliJ IDEA"
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profili"
+            "value": "Otvori trenutni direktorij u IntelliJ IDEA"
           }
         },
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "الملفات الشخصية"
+            "value": "فتح الدليل الحالي في IntelliJ IDEA"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profiler"
+            "value": "Åpne gjeldende katalog i IntelliJ IDEA"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Perfis"
+            "value": "Abrir Diretório Atual no IntelliJ IDEA"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "โปรไฟล์"
+            "value": "เปิดไดเรกทอรีปัจจุบันใน IntelliJ IDEA"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profiller"
+            "value": "Geçerli Dizini IntelliJ IDEA'da Aç"
           }
         }
       }
     },
-    "menu.file.profiles.saveAs": {
+    "error.remoteDrop.invalidFileURL": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Save Current as Profile…"
+            "value": "Dropped item is not a file URL."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "現在の状態をプロファイルとして保存…"
+            "value": "ドロップされた項目はファイル URL ではありません。"
           }
-        },
-        "zh-Hans": {
+        }
+      }
+    },
+    "error.remoteDrop.unavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "将当前状态保存为配置…"
+            "value": "Remote drop is unavailable."
           }
         },
-        "zh-Hant": {
+        "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "將目前狀態儲存為設定檔…"
+            "value": "リモートへのドロップは利用できません。"
+          }
+        }
+      }
+    },
+    "error.remoteDrop.uploadFailed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed to upload dropped file: %@"
           }
         },
-        "ko": {
+        "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "현재 상태를 프로필로 저장…"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aktuell als Profil speichern …"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Guardar actual como perfil…"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enregistrer comme profil…"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Salva come profilo…"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gem nuværende som profil…"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zapisz bieżący jako profil…"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Сохранить текущее как профиль…"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sačuvaj trenutno kao profil…"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "حفظ الحالي كملف شخصي…"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lagre gjeldende som profil…"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Salvar Atual como Perfil…"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "บันทึกสถานะปัจจุบันเป็นโปรไฟล์…"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mevcut Durumu Profil Olarak Kaydet…"
+            "value": "ドロップされたファイルのアップロードに失敗しました: %@"
           }
         }
       }
@@ -77803,120 +79041,7 @@
         }
       }
     },
-    "menu.file.profiles.loadHere": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Load in Current Window"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "現在のウインドウに読み込む"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "在当前窗口中加载"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "載入至目前視窗"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "현재 창에 불러오기"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Im aktuellen Fenster laden"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cargar en ventana actual"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Charger dans la fenêtre actuelle"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Carica nella finestra corrente"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Indlæs i nuværende vindue"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Załaduj w bieżącym oknie"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Загрузить в текущее окно"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Učitaj u trenutni prozor"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "تحميل في النافذة الحالية"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Last inn i gjeldende vindu"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Carregar na Janela Atual"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "โหลดในหน้าต่างปัจจุบัน"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mevcut Pencereye Yükle"
-          }
-        }
-      }
-    },
-    "menu.file.profiles.delete": {
+    "profile.delete.title": {
       "extractionState": "manual",
       "localizations": {
         "en": {
@@ -78025,1136 +79150,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Profili Sil"
-          }
-        }
-      }
-    },
-    "menu.file.profiles.deleteAll": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete All Profiles…"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "すべてのプロファイルを削除…"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "删除所有配置…"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "刪除所有設定檔…"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "모든 프로필 삭제…"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Alle Profile löschen …"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eliminar todos los perfiles…"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Supprimer tous les profils…"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Elimina tutti i profili…"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Slet alle profiler…"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usuń wszystkie profile…"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Удалить все профили…"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Obriši sve profile…"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "حذف جميع الملفات الشخصية…"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Slett alle profiler…"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Excluir Todos os Perfis…"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ลบโปรไฟล์ทั้งหมด…"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tüm Profilleri Sil…"
-          }
-        }
-      }
-    },
-    "profile.save.title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Save Profile"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "プロファイルを保存"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "保存配置"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "儲存設定檔"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "프로필 저장"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil speichern"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Guardar perfil"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enregistrer le profil"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Salva profilo"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gem profil"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zapisz profil"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Сохранить профиль"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sačuvaj profil"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "حفظ الملف الشخصي"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lagre profil"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Salvar Perfil"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "บันทึกโปรไฟล์"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profili Kaydet"
-          }
-        }
-      }
-    },
-    "profile.save.message": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enter a name for this profile. The current workspace layout will be saved."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "プロファイル名を入力してください。現在のワークスペースレイアウトが保存されます。"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "输入此配置的名称。当前工作区布局将被保存。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "輸入此設定檔的名稱。目前的工作區佈局將被儲存。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "프로필 이름을 입력하세요. 현재 워크스페이스 레이아웃이 저장됩니다."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Geben Sie einen Namen für dieses Profil ein. Das aktuelle Arbeitsbereichlayout wird gespeichert."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Introduce un nombre para este perfil. Se guardará la disposición actual del espacio de trabajo."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Entrez un nom pour ce profil. La disposition actuelle de l’espace de travail sera enregistrée."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inserisci un nome per questo profilo. Il layout dell’area di lavoro corrente verrà salvato."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Indtast et navn for denne profil. Det nuværende arbejdsområdelayout gemmes."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wprowadź nazwę tego profilu. Bieżący układ przestrzeni roboczej zostanie zapisany."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Введите имя для этого профиля. Текущая раскладка рабочего пространства будет сохранена."
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Unesite ime za ovaj profil. Trenutni raspored radnog prostora će biti sačuvan."
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "أدخل اسمًا لهذا الملف الشخصي. سيتم حفظ تخطيط مساحة العمل الحالية."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Skriv inn et navn for denne profilen. Gjeldende arbeidsområdeoppsett blir lagret."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Digite um nome para este perfil. O layout atual do espaço de trabalho será salvo."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ป้อนชื่อสำหรับโปรไฟล์นี้ เลย์เอาต์พื้นที่ทำงานปัจจุบันจะถูกบันทึก"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bu profil için bir ad girin. Mevcut çalışma alanı düzeni kaydedilecektir."
-          }
-        }
-      }
-    },
-    "profile.save.button": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Save"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "保存"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "保存"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "儲存"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "저장"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Speichern"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Guardar"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enregistrer"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Salva"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gem"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zapisz"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Сохранить"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sačuvaj"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "حفظ"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lagre"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Salvar"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "บันทึก"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Kaydet"
-          }
-        }
-      }
-    },
-    "profile.cancel.button": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancel"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "キャンセル"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "取消"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "取消"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "취소"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbrechen"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annuler"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annulla"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annuller"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Anuluj"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Отмена"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Otkaži"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "إلغاء"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avbryt"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ยกเลิก"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "İptal"
-          }
-        }
-      }
-    },
-    "profile.save.placeholder": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "e.g. Work, Personal"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "例: 仕事、個人"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "例如：工作、个人"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "例如：工作、個人"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "예: 업무, 개인"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "z. B. Arbeit, Privat"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "p. ej. Trabajo, Personal"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "p. ex. Travail, Personnel"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "es. Lavoro, Personale"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "f.eks. Arbejde, Personlig"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "np. Praca, Osobiste"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "напр. Работа, Личное"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "npr. Posao, Lično"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "مثال: عمل، شخصي"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "f.eks. Arbeid, Personlig"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ex. Trabalho, Pessoal"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "เช่น งาน, ส่วนตัว"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ör. İş, Kişisel"
-          }
-        }
-      }
-    },
-    "profile.overwrite.title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profile Already Exists"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "プロファイルは既に存在します"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "配置已存在"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "設定檔已存在"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "프로필이 이미 존재합니다"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil existiert bereits"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El perfil ya existe"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Le profil existe déjà"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Il profilo esiste già"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profilen findes allerede"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil już istnieje"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Профиль уже существует"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil već postoji"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "الملف الشخصي موجود بالفعل"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profilen finnes allerede"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Perfil Já Existe"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "โปรไฟล์มีอยู่แล้ว"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil Zaten Mevcut"
-          }
-        }
-      }
-    },
-    "profile.overwrite.message": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A profile named \"%@\" already exists. Do you want to replace it?"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "「%@」という名前のプロファイルは既に存在します。置き換えますか？"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "名为“%@”的配置已存在。是否要替换它？"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "名為「%@」的設定檔已存在。是否要取代它？"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\"%@\"라는 이름의 프로필이 이미 존재합니다. 교체하시겠습니까?"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ein Profil mit dem Namen „%@“ existiert bereits. Möchten Sie es ersetzen?"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ya existe un perfil llamado \"%@\". ¿Desea reemplazarlo?"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un profil nommé « %@ » existe déjà. Voulez-vous le remplacer ?"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un profilo denominato \"%@\" esiste già. Vuoi sostituirlo?"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "En profil med navnet \"%@\" findes allerede. Vil du erstatte den?"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil o nazwie „%@” już istnieje. Czy chcesz go zastąpić?"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Профиль с именем «%@» уже существует. Хотите заменить его?"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil pod imenom \"%@\" već postoji. Želite li ga zamijeniti?"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "يوجد بالفعل ملف شخصي باسم \"%@\". هل تريد استبداله؟"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "En profil med navnet «%@» finnes allerede. Vil du erstatte den?"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Um perfil chamado \"%@\" já existe. Deseja substituí-lo?"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "โปรไฟล์ชื่อ \"%@\" มีอยู่แล้ว คุณต้องการแทนที่หรือไม่?"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\"%@\" adlı bir profil zaten mevcut. Değiştirmek istiyor musunuz?"
-          }
-        }
-      }
-    },
-    "profile.overwrite.replace": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Replace"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "置き換え"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "替换"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "取代"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "교체"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ersetzen"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reemplazar"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Remplacer"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sostituisci"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Erstat"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zastąp"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Заменить"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zamijeni"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "استبدال"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Erstatt"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Substituir"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "แทนที่"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Değiştir"
-          }
-        }
-      }
-    },
-    "profile.load.title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Load Profile"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "プロファイルを読み込む"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "加载配置"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "載入設定檔"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "프로필 불러오기"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil laden"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cargar perfil"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Charger le profil"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Carica profilo"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Indlæs profil"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Załaduj profil"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Загрузить профиль"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Učitaj profil"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "تحميل الملف الشخصي"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Last inn profil"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Carregar Perfil"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "โหลดโปรไฟล์"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profili Yükle"
           }
         }
       }
@@ -79272,567 +79267,115 @@
         }
       }
     },
-    "profile.load.button": {
+    "profile.save.placeholder": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Load Profile"
+            "value": "e.g. Work, Personal"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "プロファイルを読み込む"
+            "value": "例: 仕事、個人"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "加载配置"
+            "value": "例如：工作、个人"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "載入設定檔"
+            "value": "例如：工作、個人"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "프로필 불러오기"
+            "value": "예: 업무, 개인"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profil laden"
+            "value": "z. B. Arbeit, Privat"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cargar perfil"
+            "value": "p. ej. Trabajo, Personal"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Charger le profil"
+            "value": "p. ex. Travail, Personnel"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Carica profilo"
+            "value": "es. Lavoro, Personale"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Indlæs profil"
+            "value": "f.eks. Arbejde, Personlig"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Załaduj profil"
+            "value": "np. Praca, Osobiste"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Загрузить профиль"
+            "value": "напр. Работа, Личное"
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Učitaj profil"
+            "value": "npr. Posao, Lično"
           }
         },
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "تحميل الملف الشخصي"
+            "value": "مثال: عمل، شخصي"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Last inn profil"
+            "value": "f.eks. Arbeid, Personlig"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Carregar Perfil"
+            "value": "ex. Trabalho, Pessoal"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "โหลดโปรไฟล์"
+            "value": "เช่น งาน, ส่วนตัว"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Profili Yükle"
-          }
-        }
-      }
-    },
-    "profile.delete.title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete Profile"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "プロファイルを削除"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "删除配置"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "刪除設定檔"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "프로필 삭제"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil löschen"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eliminar perfil"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Supprimer le profil"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Elimina profilo"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Slet profil"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usuń profil"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Удалить профиль"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Obriši profil"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "حذف الملف الشخصي"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Slett profil"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Excluir Perfil"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ลบโปรไฟล์"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profili Sil"
-          }
-        }
-      }
-    },
-    "profile.delete.message": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Are you sure you want to delete the profile \"%@\"? This cannot be undone."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "プロファイル「%@」を削除してもよろしいですか？この操作は元に戻せません。"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "确定要删除配置“%@”吗？此操作无法撤销。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "確定要刪除設定檔「%@」嗎？此操作無法復原。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\"%@\" 프로필을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Möchten Sie das Profil „%@“ wirklich löschen? Dies kann nicht rückgängig gemacht werden."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "¿Está seguro de que desea eliminar el perfil \"%@\"? Esta acción no se puede deshacer."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Voulez-vous vraiment supprimer le profil « %@ » ? Cette action est irréversible."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sei sicuro di voler eliminare il profilo \"%@\"? Questa azione non può essere annullata."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Er du sikker på, at du vil slette profilen \"%@\"? Dette kan ikke fortrydes."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Czy na pewno chcesz usunąć profil „%@”? Tej operacji nie można cofnąć."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Вы уверены, что хотите удалить профиль «%@»? Это действие нельзя отменить."
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Jeste li sigurni da želite obrisati profil \"%@\"? Ovo se ne može poništiti."
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "هل أنت متأكد أنك تريد حذف الملف الشخصي \"%@\"؟ لا يمكن التراجع عن هذا الإجراء."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Er du sikker på at du vil slette profilen «%@»? Dette kan ikke angres."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tem certeza de que deseja excluir o perfil \"%@\"? Esta ação não pode ser desfeita."
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "คุณแน่ใจหรือไม่ว่าต้องการลบโปรไฟล์ \"%@\"? การดำเนินการนี้ไม่สามารถยกเลิกได้"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\"%@\" profilini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
-          }
-        }
-      }
-    },
-    "profile.delete.button": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "削除"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "删除"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "刪除"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "삭제"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Löschen"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eliminar"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Supprimer"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Elimina"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Slet"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usuń"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Удалить"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Obriši"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "حذف"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Slett"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Excluir"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ลบ"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sil"
-          }
-        }
-      }
-    },
-    "profile.deleteAll.title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete All Profiles"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "すべてのプロファイルを削除"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "删除所有配置"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "刪除所有設定檔"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "모든 프로필 삭제"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Alle Profile löschen"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eliminar todos los perfiles"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Supprimer tous les profils"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Elimina tutti i profili"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Slet alle profiler"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usuń wszystkie profile"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Удалить все профили"
-          }
-        },
-        "bs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Obriši sve profile"
-          }
-        },
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "حذف جميع الملفات الشخصية"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Slett alle profiler"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Excluir Todos os Perfis"
-          }
-        },
-        "th": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ลบโปรไฟล์ทั้งหมด"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tüm Profilleri Sil"
+            "value": "ör. İş, Kişisel"
           }
         }
       }
@@ -79950,6 +79493,797 @@
         }
       }
     },
+    "profile.load.button": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Load Profile"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロファイルを読み込む"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加载配置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "載入設定檔"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프로필 불러오기"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil laden"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargar perfil"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charger le profil"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carica profilo"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indlæs profil"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Załaduj profil"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Загрузить профиль"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Učitaj profil"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحميل الملف الشخصي"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last inn profil"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carregar Perfil"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โหลดโปรไฟล์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profili Yükle"
+          }
+        }
+      }
+    },
+    "profile.delete.button": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "삭제"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elimina"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slet"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obriši"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slett"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excluir"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลบ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sil"
+          }
+        }
+      }
+    },
+    "profile.overwrite.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profile Already Exists"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロファイルは既に存在します"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置已存在"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定檔已存在"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프로필이 이미 존재합니다"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil existiert bereits"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El perfil ya existe"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le profil existe déjà"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il profilo esiste già"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profilen findes allerede"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil już istnieje"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Профиль уже существует"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil već postoji"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الملف الشخصي موجود بالفعل"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profilen finnes allerede"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perfil Já Existe"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โปรไฟล์มีอยู่แล้ว"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil Zaten Mevcut"
+          }
+        }
+      }
+    },
+    "profile.cancel.button": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャンセル"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "취소"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuller"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anuluj"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отмена"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otkaži"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إلغاء"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avbryt"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ยกเลิก"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İptal"
+          }
+        }
+      }
+    },
+    "profile.overwrite.replace": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Replace"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "置き換え"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "替换"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取代"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "교체"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ersetzen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reemplazar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remplacer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sostituisci"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erstat"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zastąp"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заменить"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamijeni"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استبدال"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erstatt"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Substituir"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แทนที่"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Değiştir"
+          }
+        }
+      }
+    },
+    "menu.file.profiles": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profiles"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロファイル"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定檔"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프로필"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profile"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perfiles"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profils"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profili"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profiler"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profile"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Профили"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profili"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الملفات الشخصية"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profiler"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perfis"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โปรไฟล์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profiller"
+          }
+        }
+      }
+    },
+    "profile.save.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save Profile"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロファイルを保存"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存配置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "儲存設定檔"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프로필 저장"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil speichern"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar perfil"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer le profil"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva profilo"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gem profil"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisz profil"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохранить профиль"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sačuvaj profil"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حفظ الملف الشخصي"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lagre profil"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvar Perfil"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บันทึกโปรไฟล์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profili Kaydet"
+          }
+        }
+      }
+    },
     "profile.deleteAll.button": {
       "extractionState": "manual",
       "localizations": {
@@ -80059,6 +80393,1136 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tümünü Sil"
+          }
+        }
+      }
+    },
+    "menu.file.profiles.saveAs": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save Current as Profile…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の状態をプロファイルとして保存…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将当前状态保存为配置…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "將目前狀態儲存為設定檔…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 상태를 프로필로 저장…"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktuell als Profil speichern …"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar actual como perfil…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer comme profil…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva come profilo…"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gem nuværende som profil…"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisz bieżący jako profil…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохранить текущее как профиль…"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sačuvaj trenutno kao profil…"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حفظ الحالي كملف شخصي…"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lagre gjeldende som profil…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvar Atual como Perfil…"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บันทึกสถานะปัจจุบันเป็นโปรไฟล์…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mevcut Durumu Profil Olarak Kaydet…"
+          }
+        }
+      }
+    },
+    "menu.file.profiles.delete": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete Profile"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロファイルを削除"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除配置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除設定檔"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프로필 삭제"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil löschen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar perfil"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer le profil"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elimina profilo"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slet profil"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń profil"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить профиль"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obriši profil"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف الملف الشخصي"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slett profil"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excluir Perfil"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลบโปรไฟล์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profili Sil"
+          }
+        }
+      }
+    },
+    "profile.deleteAll.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete All Profiles"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのプロファイルを削除"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除所有配置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除所有設定檔"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모든 프로필 삭제"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Profile löschen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar todos los perfiles"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer tous les profils"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elimina tutti i profili"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slet alle profiler"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń wszystkie profile"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить все профили"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obriši sve profile"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف جميع الملفات الشخصية"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slett alle profiler"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excluir Todos os Perfis"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลบโปรไฟล์ทั้งหมด"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tüm Profilleri Sil"
+          }
+        }
+      }
+    },
+    "menu.file.profiles.deleteAll": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete All Profiles…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのプロファイルを削除…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除所有配置…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除所有設定檔…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모든 프로필 삭제…"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Profile löschen …"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar todos los perfiles…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer tous les profils…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elimina tutti i profili…"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slet alle profiler…"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń wszystkie profile…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить все профили…"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obriši sve profile…"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف جميع الملفات الشخصية…"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slett alle profiler…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excluir Todos os Perfis…"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ลบโปรไฟล์ทั้งหมด…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tüm Profilleri Sil…"
+          }
+        }
+      }
+    },
+    "profile.load.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Load Profile"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロファイルを読み込む"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加载配置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "載入設定檔"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프로필 불러오기"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil laden"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargar perfil"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charger le profil"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carica profilo"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indlæs profil"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Załaduj profil"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Загрузить профиль"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Učitaj profil"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحميل الملف الشخصي"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last inn profil"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carregar Perfil"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โหลดโปรไฟล์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profili Yükle"
+          }
+        }
+      }
+    },
+    "profile.save.button": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "儲存"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "저장"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speichern"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gem"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisz"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохранить"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sačuvaj"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حفظ"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lagre"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvar"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บันทึก"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydet"
+          }
+        }
+      }
+    },
+    "profile.delete.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Are you sure you want to delete the profile \"%@\"? This cannot be undone."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロファイル「%@」を削除してもよろしいですか？この操作は元に戻せません。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确定要删除配置“%@”吗？此操作无法撤销。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "確定要刪除設定檔「%@」嗎？此操作無法復原。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\" 프로필을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Möchten Sie das Profil „%@“ wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Está seguro de que desea eliminar el perfil \"%@\"? Esta acción no se puede deshacer."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voulez-vous vraiment supprimer le profil « %@ » ? Cette action est irréversible."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sei sicuro di voler eliminare il profilo \"%@\"? Questa azione non può essere annullata."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Er du sikker på, at du vil slette profilen \"%@\"? Dette kan ikke fortrydes."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Czy na pewno chcesz usunąć profil „%@”? Tej operacji nie można cofnąć."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вы уверены, что хотите удалить профиль «%@»? Это действие нельзя отменить."
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeste li sigurni da želite obrisati profil \"%@\"? Ovo se ne može poništiti."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هل أنت متأكد أنك تريد حذف الملف الشخصي \"%@\"؟ لا يمكن التراجع عن هذا الإجراء."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Er du sikker på at du vil slette profilen «%@»? Dette kan ikke angres."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tem certeza de que deseja excluir o perfil \"%@\"? Esta ação não pode ser desfeita."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คุณแน่ใจหรือไม่ว่าต้องการลบโปรไฟล์ \"%@\"? การดำเนินการนี้ไม่สามารถยกเลิกได้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\" profilini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+          }
+        }
+      }
+    },
+    "profile.overwrite.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A profile named \"%@\" already exists. Do you want to replace it?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「%@」という名前のプロファイルは既に存在します。置き換えますか？"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名为“%@”的配置已存在。是否要替换它？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名為「%@」的設定檔已存在。是否要取代它？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\"라는 이름의 프로필이 이미 존재합니다. 교체하시겠습니까?"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ein Profil mit dem Namen „%@“ existiert bereits. Möchten Sie es ersetzen?"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya existe un perfil llamado \"%@\". ¿Desea reemplazarlo?"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un profil nommé « %@ » existe déjà. Voulez-vous le remplacer ?"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un profilo denominato \"%@\" esiste già. Vuoi sostituirlo?"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En profil med navnet \"%@\" findes allerede. Vil du erstatte den?"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil o nazwie „%@” już istnieje. Czy chcesz go zastąpić?"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Профиль с именем «%@» уже существует. Хотите заменить его?"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil pod imenom \"%@\" već postoji. Želite li ga zamijeniti?"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يوجد بالفعل ملف شخصي باسم \"%@\". هل تريد استبداله؟"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En profil med navnet «%@» finnes allerede. Vil du erstatte den?"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um perfil chamado \"%@\" já existe. Deseja substituí-lo?"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โปรไฟล์ชื่อ \"%@\" มีอยู่แล้ว คุณต้องการแทนที่หรือไม่?"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\" adlı bir profil zaten mevcut. Değiştirmek istiyor musunuz?"
+          }
+        }
+      }
+    },
+    "profile.save.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter a name for this profile. The current workspace layout will be saved."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プロファイル名を入力してください。現在のワークスペースレイアウトが保存されます。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入此配置的名称。当前工作区布局将被保存。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "輸入此設定檔的名稱。目前的工作區佈局將被儲存。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프로필 이름을 입력하세요. 현재 워크스페이스 레이아웃이 저장됩니다."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geben Sie einen Namen für dieses Profil ein. Das aktuelle Arbeitsbereichlayout wird gespeichert."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Introduce un nombre para este perfil. Se guardará la disposición actual del espacio de trabajo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrez un nom pour ce profil. La disposition actuelle de l’espace de travail sera enregistrée."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inserisci un nome per questo profilo. Il layout dell’area di lavoro corrente verrà salvato."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indtast et navn for denne profil. Det nuværende arbejdsområdelayout gemmes."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wprowadź nazwę tego profilu. Bieżący układ przestrzeni roboczej zostanie zapisany."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Введите имя для этого профиля. Текущая раскладка рабочего пространства будет сохранена."
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unesite ime za ovaj profil. Trenutni raspored radnog prostora će biti sačuvan."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أدخل اسمًا لهذا الملف الشخصي. سيتم حفظ تخطيط مساحة العمل الحالية."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skriv inn et navn for denne profilen. Gjeldende arbeidsområdeoppsett blir lagret."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Digite um nome para este perfil. O layout atual do espaço de trabalho será salvo."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ป้อนชื่อสำหรับโปรไฟล์นี้ เลย์เอาต์พื้นที่ทำงานปัจจุบันจะถูกบันทึก"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu profil için bir ad girin. Mevcut çalışma alanı düzeni kaydedilecektir."
+          }
+        }
+      }
+    },
+    "menu.file.profiles.loadHere": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Load in Current Window"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在のウインドウに読み込む"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在当前窗口中加载"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "載入至目前視窗"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 창에 불러오기"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Im aktuellen Fenster laden"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cargar en ventana actual"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charger dans la fenêtre actuelle"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carica nella finestra corrente"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indlæs i nuværende vindue"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Załaduj w bieżącym oknie"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Загрузить в текущее окно"
+          }
+        },
+        "bs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Učitaj u trenutni prozor"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحميل في النافذة الحالية"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last inn i gjeldende vindu"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carregar na Janela Atual"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โหลดในหน้าต่างปัจจุบัน"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mevcut Pencereye Yükle"
           }
         }
       }
