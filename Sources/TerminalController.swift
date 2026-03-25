@@ -11058,11 +11058,15 @@ class TerminalController {
         guard let tabManager else {
             return "ERROR: TabManager not available"
         }
-        guard let profile = ProfileStore.saveCurrentSession(name: name, tabManager: tabManager) else {
-            return "ERROR: Failed to save profile '\(name)'"
+        var result = "ERROR: Failed to save profile '\(name)'"
+        v2MainSync {
+            guard let profile = ProfileStore.saveCurrentSession(name: name, tabManager: tabManager) else {
+                return
+            }
+            tabManager.setActiveProfileName(name)
+            result = "OK: Profile '\(profile.name)' saved with \(profile.snapshot.workspaces.count) workspace(s)"
         }
-        tabManager.setActiveProfileName(name)
-        return "OK: Profile '\(profile.name)' saved with \(profile.snapshot.workspaces.count) workspace(s)"
+        return result
     }
 
     private func profileLoad(_ args: String) -> String {
@@ -11084,31 +11088,37 @@ class TerminalController {
             return "ERROR: Profile '\(name)' not found"
         }
 
-        if inNewWindow {
-            let snapshot = SessionWindowSnapshot(
-                frame: nil,
-                display: nil,
-                tabManager: profile.snapshot,
-                sidebar: SessionSidebarSnapshot(
-                    isVisible: true,
-                    selection: .tabs,
-                    width: nil
+        var result = "ERROR: Failed to load profile '\(name)'"
+        v2MainSync {
+            if inNewWindow {
+                guard let appDelegate = AppDelegate.shared else {
+                    result = "ERROR: AppDelegate not available"
+                    return
+                }
+                let snapshot = SessionWindowSnapshot(
+                    frame: nil,
+                    display: nil,
+                    tabManager: profile.snapshot,
+                    sidebar: SessionSidebarSnapshot(
+                        isVisible: true,
+                        selection: .tabs,
+                        width: nil
+                    )
                 )
-            )
-            guard let appDelegate = AppDelegate.shared else {
-                return "ERROR: AppDelegate not available"
+                let windowId = appDelegate.createMainWindow(sessionWindowSnapshot: snapshot)
+                appDelegate.tabManagerFor(windowId: windowId)?.setActiveProfileName(name)
+                result = "OK: Profile '\(name)' loaded in new window (\(profile.snapshot.workspaces.count) workspace(s))"
+            } else {
+                guard let tabManager else {
+                    result = "ERROR: TabManager not available"
+                    return
+                }
+                tabManager.restoreSessionSnapshot(profile.snapshot)
+                tabManager.setActiveProfileName(name)
+                result = "OK: Profile '\(name)' loaded (\(profile.snapshot.workspaces.count) workspace(s))"
             }
-            let windowId = appDelegate.createMainWindow(sessionWindowSnapshot: snapshot)
-            appDelegate.tabManagerFor(windowId: windowId)?.setActiveProfileName(name)
-            return "OK: Profile '\(name)' loaded in new window (\(profile.snapshot.workspaces.count) workspace(s))"
-        } else {
-            guard let tabManager else {
-                return "ERROR: TabManager not available"
-            }
-            tabManager.restoreSessionSnapshot(profile.snapshot)
-            tabManager.setActiveProfileName(name)
-            return "OK: Profile '\(name)' loaded (\(profile.snapshot.workspaces.count) workspace(s))"
         }
+        return result
     }
 
     private func profileDelete(_ args: String) -> String {
@@ -11123,8 +11133,10 @@ class TerminalController {
             return "ERROR: Failed to delete profile '\(name)'"
         }
         // Clear active profile name so autosave doesn't resurrect the deleted profile.
-        if let tabManager, tabManager.activeProfileName == name {
-            tabManager.setActiveProfileName(nil)
+        v2MainSync {
+            if let tabManager, tabManager.activeProfileName == name {
+                tabManager.setActiveProfileName(nil)
+            }
         }
         return "OK: Profile '\(name)' deleted"
     }
